@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.antifourte.view_model.FragmentHolderActivityViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.AntiFourteFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="412dp"
+                android:layout_height="738dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="373dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="-1dp">
+
+
+                    <EditText
+                        android:id="@+id/targetNum"
+                        android:layout_width="125dp"
+                        android:layout_height="59dp"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:hint="target number"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:text="@={viewModel.targetNumber}"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.384"
+                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="216dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="56dp"
+                        android:paddingTop="10dp"
+                        android:text="Target Number : "
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="340dp"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="24dp"
+                        android:paddingTop="10dp"
+                        android:text="Number options"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <EditText
+                        android:id="@+id/optionNum1"
+                        android:layout_width="70dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="12dp"
+                        android:ems="10"
+                        android:hint="num1"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="@={viewModel.optionNumber1}"
+                        android:textAlignment="center"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <EditText
+                        android:id="@+id/optionNum2"
+                        android:layout_width="70dp"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="20dp"
+                        android:ems="10"
+                        android:hint="num2"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="@={viewModel.optionNumber2}"
+                        android:textAlignment="center"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toBottomOf="@+id/optionNum1"
+                        app:layout_constraintStart_toEndOf="@+id/optionNum1" />
+
+                    <EditText
+                        android:id="@+id/optionNum3"
+                        android:layout_width="70dp"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="20dp"
+                        android:ems="10"
+                        android:hint="num3"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="@={viewModel.optionNumber3}"
+                        android:textAlignment="center"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toBottomOf="@+id/optionNum2"
+                        app:layout_constraintStart_toEndOf="@+id/optionNum2" />
+
+                    <EditText
+                        android:id="@+id/optionNum4"
+                        android:layout_width="70dp"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="20dp"
+                        android:ems="10"
+                        android:hint="num4"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="@={viewModel.optionNumber4}"
+                        android:textAlignment="center"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toBottomOf="@+id/optionNum3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/optionNum3" />
+
+                    <Button
+                        android:id="@+id/clear"
+                        android:layout_width="161dp"
+                        android:layout_height="61dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Clear"
+                        app:layout_constraintBottom_toBottomOf="@+id/done"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/done"
+                        android:layout_width="161dp"
+                        android:layout_height="61dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Done"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/clear"
+                        app:layout_constraintTop_toBottomOf="@+id/optionNum2" />
+
+                    <TextView
+                        android:id="@+id/warning"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:text="DataMissing"
+                        android:textAlignment="center"
+                        android:textColor="#E42B2B"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/clear" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ScrollView
+                    android:id="@+id/myScrollView"
+                    android:layout_width="414dp"
+                    android:layout_height="364dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.666"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/done"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="\n\n\n"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@{viewModel.resultString}"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>
